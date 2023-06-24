@@ -22,9 +22,8 @@ class ApiService {
 
     if (response.statusCode == 200) {
       String vr = await response.stream.bytesToString();
-      print(vr);
+
       var movie = jsonDecode(vr);
-      print(movie);
 
       ret_movie = Movie(
           id: movie['imdb_id'],

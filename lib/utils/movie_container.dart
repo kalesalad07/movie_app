@@ -4,7 +4,7 @@ import 'package:movie_app/services/firestore-services.dart';
 import 'package:movie_app/utils/carousel_slider.dart';
 import 'package:movie_app/utils/globals.dart';
 import 'package:movie_app/utils/re_use_widgets.dart';
-import 'package:movie_app/utils/stars.dart';
+import 'package:movie_app/models/stars.dart';
 import 'package:movie_app/utils/youtube_launcher.dart';
 
 import '../models/movies.dart';
@@ -53,7 +53,6 @@ movieItem(BuildContext context, Movie movie) {
       List likedResponse = isLiked(movie.id);
       if (likedResponse[0]) {
         movie = likedResponse[1];
-        print('used firestore movie');
       } else {
         movie = await ApiService().getDetailsById(movie.id);
         await ApiService().getImageById(movie);

@@ -2,7 +2,7 @@ import 'dart:collection';
 
 import 'package:flutter/widgets.dart';
 
-import '../models/movies.dart';
+import 'movies.dart';
 
 class MoviesChangeNotifier extends ChangeNotifier {
   final List<Movie> _movies = [];

@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:movie_app/utils/movie_provider.dart';
+import 'package:movie_app/models/movie_provider.dart';
 
 import '../models/movies.dart';
 

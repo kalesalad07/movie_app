@@ -56,7 +56,7 @@ class AppRouter {
       final isGoingToInit = state.subloc == splashLocation;
 
       final isGoneHome = state.subloc == homeLocation;
-      print(isLoggedIn);
+
       //final isGoingToOnboard = state.subloc == onboardLocation;
 
       // If not Initialized and not going to Initialized redirect to Splash
@@ -67,7 +67,6 @@ class AppRouter {
           if (!isGoingToLogin) return loginHomeLocation;
         } else {
           if (!isGoneHome) {
-            print("going home");
             return homeLocation;
           } else {
             return null;
